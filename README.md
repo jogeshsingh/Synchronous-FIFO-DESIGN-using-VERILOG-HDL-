@@ -1,7 +1,9 @@
 # Synchronous-FIFO-DESIGN-using-VERILOG-HDL
- 1 clock 
+ single clock domain 
  DATA_WIDTH = configurable
  ADDR_WIDTH = configurable
+ 
+ 
  Although I used simulation testbench to control write enable, read enable , data input , however A FSM Could be made to control the write enable and read enable 
  port of synchronous FIFO , depending upon how much data to be written to and read from Memory module.
  
