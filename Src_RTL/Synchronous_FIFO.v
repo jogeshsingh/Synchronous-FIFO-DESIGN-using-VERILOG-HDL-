@@ -46,6 +46,8 @@ output [D_WIDTH-1:0] o_fifo_data
  wire r_enable ;                      // read enable control   
  wire w_enable ;                      // write_enable control  
  
+ wire [A_WIDTH-1:0] rd_addr;
+ wire [A_WIDTH-1:0] wr_addr ;
   
  assign r_enable = i_rd_en && ~o_fifo_empty ;
  assign w_enable = i_wr_en && ~o_fifo_full  ; 
