@@ -40,14 +40,14 @@ output [D_WIDTH-1:0] o_fifo_data
  reg [A_WIDTH:0] rd_cnt = 0 ;            // read counter 
  reg [A_WIDTH:0] wr_cnt = 0;           // write counter 
   
- reg [A_WIDTH:0] rd_cnt_nxt = 0;
- reg [A_WIDTH:0] wr_cnt_nxt = 0; 
+ reg [A_WIDTH:0] rd_cnt_nxt ;
+ reg [A_WIDTH:0] wr_cnt_nxt ; 
   
  wire r_enable ;                      // read enable control   
  wire w_enable ;                      // write_enable control  
  
- wire [A_WIDTH-1:0] rd_addr;
- wire [A_WIDTH-1:0] wr_addr ;
+  wire [A_WIDTH-1:0] o_rd_addr;
+  wire [A_WIDTH-1:0] o_wr_addr ;
   
  assign r_enable = i_rd_en && ~o_fifo_empty ;
  assign w_enable = i_wr_en && ~o_fifo_full  ; 
